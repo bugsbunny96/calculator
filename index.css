@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 400px;
+    margin: 10vh auto 0 auto;
+    box-shadow: 0px 0px 45px 20px rgba(153, 153, 153, 1);
+}
+
+#display {
+    text-align: right;
+    height: 70px;
+    line-height: 70px;
+    padding: 16px 8px;
+    font-size: 25px;
+}
+
+.buttons {
+    display: grid;
+    border-bottom: 1px solid rgb(140, 140, 140);
+    border-left: 1px solid rgb(140, 140, 140);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.buttons > div {
+    border-top: 1px solid rgb(140, 140, 140);
+    border-right: 1px solid rgb(140, 140, 140);
+}
+
+.button {
+    border: 1px solid rgb(140, 140, 140);
+    line-height: 100px;
+    text-align: center;
+    font-size: 25px;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: rgba(0, 0, 0, 0.76);
+    color: white;
+    transition: 0.5s ease-in-out;
+}
+
+#equal {
+    background-color: rgb(22, 22, 255);
+    color: white;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    transition: background 0.2s linear;
+}
+
+body.dark{
+    background-color: #292C35;
+}
+
+body.dark h1 {
+    color: #fff;
+}
+
+body.dark #display {
+    color: #fff;
+}
+
+body.dark .button {
+    color: #fff;
+}
+
+.label {
+    background-color: #111;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50px;
+    height: 26px;
+    width: 50px;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.ball {
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+    transform: translateX(24px);
+}
+
+.fa-moon {
+    color: #f1c40f;
+}
+
+.fa-sun {
+    color: #f39c12;
+}
